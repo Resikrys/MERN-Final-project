@@ -1,0 +1,415 @@
+
+/* Configuración general */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.box-container {
+  background: linear-gradient(to bottom, #001f3f, #3498db); 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Configuración Menu */
+.menu-box {
+  background-color: #001f3f;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border: 2px solid #84baf0; 
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; 
+  justify-content: space-evenly;
+}
+
+.menu-item {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.menu-item img {
+  margin-right: 10px;
+  width: 20px; 
+  height: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 10px;
+  text-align: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+a:hover {
+  color: #7622bf;
+}
+
+
+/* Configuración footer */
+.footer-box {
+  background-color: rgb(96, 93, 94);
+  color: white;
+  padding: 2px;
+  text-align: center;
+  position: fixed;
+  bottom: 0%;
+  left: 0%;
+  width: 100%;
+  border: 2px solid #84baf0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: auto;
+  height: 100px;
+}
+
+.clinic-info {
+  margin-left: 15px;
+  text-align: left;
+  font-size: 14px;
+}
+
+/* Configuración Home */
+.home-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 50px;
+  border: 2px solid #84baf0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-box h2 {
+  color: white;
+  animation: fadeIn 0.8s ease-in-out;
+  font-size: 80px;
+}
+
+/* Configuración formulario */
+.form-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  border: 2px solid #84baf0;
+}
+
+.form-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.form-box .data-box {
+  position: relative;
+}
+
+.form-box .data-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.form-box .data-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.form-box .data-box input:focus ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+
+/* Botón formulario */
+.form-box form button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.form-box form button:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}
+
+.form-box form button span {
+  position: absolute;
+  display: block;
+}
+
+.form-box form button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+      left: -100%;
+  }
+  50%, 100% {
+      left: 100%;
+  }
+}
+
+.form-box form button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes btn-anim2 {
+  0% {
+      top: -100%;
+  }
+  50%, 100% {
+      top: 100%;
+  }
+}
+
+.form-box form button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes btn-anim3 {
+  0% {
+      right: -100%;
+  }
+  50%, 100% {
+      right: 100%;
+  }
+}
+
+.form-box form button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+      bottom: -100%;
+  }
+  50%, 100% {
+      bottom: 100%;
+  }
+}
+
+/* Formulario modifcar pacientes (labels) */
+.form-box .modify-box {
+  position: relative;
+}
+
+.form-box .modify-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.form-box .modify-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.form-box .modify-box input:focus ~ label,
+.form-box .modify-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+
+/* Configuración Tabla */
+.table-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+h2 {
+  color: white;
+  font-size: 40px;
+}
+
+input[type="text"] {
+  padding: 8px;
+  border: 2px solid #84baf0; 
+  border-radius: 5px;
+  background-color: #bbdefb; 
+  color: #0d47a1; 
+  margin-bottom: 3px;
+  text-align: center;
+}
+
+button {
+  padding: 8px 16px;
+  margin: 5px;
+  border: 2px solid #84baf0; 
+  border-radius: 5px;
+  background-color: #bbdefb; 
+  color: #0d47a1; 
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0d47a1; 
+  color: white;
+}
+
+table {
+  margin-top: 20px; 
+  border-collapse: collapse;
+  width: 55%; 
+}
+
+th, td {
+  border: 3px solid #2b2b2b;
+  padding: 6px;
+  text-align: left;
+  text-align: center;
+}
+
+th {
+  background-color: #AEB6BF;
+  color: #34495E;
+  text-align: center;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #ABEBC6; 
+  color: rgb(107, 104, 104);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #1ABC9C;
+  color: white;
+}
+
+/* Ajuste específico botones Modify y Delete */
+.button-cell {
+  font-size: 12px;
+}
+
+.button-cell button {
+  border: 1px solid #cacaca; 
+  border-radius: 5px;
+  background-color: #575757; 
+  color: #ffffff; 
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.btn-modify:hover {
+  background-color: #b92fc6; 
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #e84165; 
+  color: white;
+}
